@@ -7,7 +7,7 @@ class Videos:
             with open("videos.json", "r") as f:
                 self.videos = json.load(f)
         except FileNotFoundError:
-            self.video = []
+            self.videos = []
 
     def all(self):
         return self.videos

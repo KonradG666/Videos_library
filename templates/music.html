@@ -5,10 +5,10 @@
 {% endblock %}
 
 
-{% block head %}
-<body>
-<h2> Albums list </h2>
+{% block body %}
 
+<h1>Home Library Albums List </h1>
+<div class="Album_List">
 <table>
     <thead>
     	<th>Title</th>
@@ -23,20 +23,20 @@
     </tr>
     {% endfor %}
 </table>
-<div>
-    <h2> Add New Video </h2>
-    <form method="POST" action="/library/">
-        {{ form.hidden_tag() }}
-        <table>
-            {% for field in form if field.widget.input_type != 'hidden' %}
-                <tr>
-                    <th>{{ field.label }} {% if field.flags.required %}*{% endif %}</th>
-                    <td>{{ field }}</td>
-                </tr>
-            {% endfor %}
-        </table>
-        <input type="submit" value="Go">
-    </form>
 </div>
-</body>
+	<div class="add content">
+    		<h2> Add New Video </h2>
+    		<form method="POST" action="/library/">
+        		{{ form.hidden_tag() }}
+        		<table>
+            			{% for field in form if field.widget.input_type != 'hidden' %}
+               			 <tr>
+                    		   <th>{{ field.label }} {% if field.flags.required %}*{% endif %}</th>
+                    		   <td>{{ field }}</td>
+                		</tr>
+            			{% endfor %}
+        		</table>
+        		<input type="submit" value="Go">
+    		</form>
+	</div>
 {% endblock %}
