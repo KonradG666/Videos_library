@@ -1,5 +1,5 @@
 [
-    {"No.":1,"title": "S&M 2", "band": "Metallica", "genre": "Tnrash Metal"},
-    {"No.":2,"title": "As The Stages Burn", "band": "Arch Enemy", "genre": "Death Metal"}
-    {"No.":3,"title": "25 Lat Później", "band": "Hunter", "genre": "Soul Metal"}
+    {"No.": 1, "title": "S&M 2" , "band": "Metallica", "genre": "Tnrash Metal"},
+    {"No.": 2, "title": "As The Stages Burn" , "band": "Arch Enemy", "genre": "Death Metal"},
+    {"No.": 3, "title": "25 Lat Później", "band": "Hunter", "genre": "Soul Metal"}
 ]

@@ -9,11 +9,12 @@
 
 <h1>Home Library Albums List </h1>
 <div class="Album_List">
-<table>
+  <table>
     <thead>
-    	<th>Title</th>
-    	<th>Band</th>
-    	<th>Genre</th>
+      <th>Order Number</th>
+      <th>Title</th>
+      <th>Band</th>
+      <th>Genre</th>
     </thead>
     {% for album in videos %}
     <tr>
@@ -22,7 +23,7 @@
         <td>{{ album.genre }}</td>
     </tr>
     {% endfor %}
-</table>
+  </table>
 </div>
 	<div class="add content">
     		<h2> Add New Video </h2>

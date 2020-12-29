@@ -10,7 +10,7 @@ def videos_list():
     form = MusicVideoLibrary()
     error = ""
     if request.method == "POST":
-        if form.validate_on_submit():
+        if form.validate_on_submit()
             videos.create(form.data)
             videos.save_all()
         return redirect(url_for("videos_list"))
@@ -20,15 +20,14 @@ def videos_list():
 
 @app.route("/library/<int:video_id>/", methods=["GET", "POST"])
 def video_add(video_id):
-    video = videos.add(video_id - 1)
+    video = videos.get(video_id - 1)
     form = MusicVideoLibrary(data=video)
-    error = ""
 
     if request.method == "POST":
         if form.validate_on_submit():
             videos.update(video_id - 1, form.data)
         return redirect(url_for("videos_list"))
-    return render_template("music.html", form=form, videos=videos.all(), error=error)
+    return render_template("music_id.html", form=form, video_id=video_id)
 
 @app.route("/index/<int:video_id>", methods=["PUT"])
 def video_update(video_id):
