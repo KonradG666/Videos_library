@@ -28,7 +28,13 @@ class Videos:
         self.videos[id] = data
         self.save_all()
 
-
+    def delete(self, id):
+        video = self.get(id)
+        if video:
+            self.videos.remove(video)
+            self.save_all()
+            return True
+        return False
 
 
 videos = Videos()

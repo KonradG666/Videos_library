@@ -8,7 +8,7 @@
 {% block body %}
 
 <h1>Home Library Albums List </h1>
-<div class="Album_List">
+<div class="Albums_List">
   <table>
     <thead>
       <th>Order Number</th>
@@ -18,7 +18,7 @@
     </thead>
     {% for album in videos %}
     <tr>
-        <td><a href="/library/{{ loop.index }}">{{ album.title }}</a></td>
+        <td>{{ album.title }}</td>
         <td>{{ album.band }}</td>
         <td>{{ album.genre }}</td>
     </tr>
