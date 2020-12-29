@@ -10,7 +10,7 @@ def videos_list():
     form = MusicVideoLibrary()
     error = ""
     if request.method == "POST":
-        if form.validate_on_submit()
+        if form.validate_on_submit():
             videos.create(form.data)
             videos.save_all()
         return redirect(url_for("videos_list"))
