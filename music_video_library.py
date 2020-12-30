@@ -15,7 +15,7 @@ def videos_list():
             videos.save_all()
         return redirect(url_for("videos_list"))
 
-    return render_template("music2.html", form=form, videos=videos.all(), error=error)
+    return render_template("music.html", form=form, videos=videos.all(), error=error)
 
 
 @app.route("/library/<int:video_id>/", methods=["DELETE"])
@@ -25,7 +25,7 @@ def delete_video(video_id):
     video = videos.delete(video_id - 1)
 
 
-    return render_template("music_id2.html", form=form, videos=videos.all(), error=error)
+    return render_template("music_id.html", form=form, videos=videos.all(), error=error)
 
 @app.route("/library/<int:video_id>", methods=["PUT"])
 def video_update(video_id):
