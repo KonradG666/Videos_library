@@ -10,25 +10,25 @@
 </head>
 
 <body>
-<h1>Home Library Albums List </h1>
 
+<h1>Home Library Albums List </h1>
 <table>
     <thead>
-      <th>Title  </th>
-      <th>Band   </th>
-      <th>Genre  </th>
+      <th>Title</th>
+      <th>Band </th>
+      <th>Genre</th>
     </thead>
-{% for todo in todos %}
+{% for video in videos %}
     <tr>
-        <td><a href="/todos/{{ loop.index }}">{{ album.title }}</a></td>
-        <td>{{ album.band }}</td>
-        <td>{{ album.genre }}</td>
+        <td><a href="/library/{{ loop.index }}">{{ video.title }}</a></td>
+        <td>{{ video.band }}</td>
+        <td>{{ video.genre }}</td>
     </tr>
 {% endfor %}
 </table>
 <div>
     <h2> Add New Video </h2>
-    <form method="POST" action="/todos/">
+    <form method="POST" action="/library/">
         {{ form.hidden_tag() }}
         <table>
             {% for field in form if field.widget.input_type != 'hidden' %}
