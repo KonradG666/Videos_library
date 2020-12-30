@@ -1,13 +1,12 @@
-{% extends 'main.html' %}
-
-{% block head %}
-<title> Album details </title>
-{% endblock %}
-
-{% block body %}
+<!DOCTYPE html>
+<html lang="en"style="background-color: peachpuff;">
+<head>
+    <meta charset="UTF-8">
+    <title>Album details</title>
+</head>
 <body>
     <h2> Change: </h2>
-    <form method="POST" action="/library/{{ video_id }}/">
+    <form method="POST" action="/todos/{{ todo_id }}/">
         {{ form.hidden_tag() }}
         <table>
             {% for field in form if field.widget.input_type != 'hidden' %}
@@ -20,4 +19,4 @@
         <input type="submit" value="Go">
     </form>
 </body>
-{% endblock %}
+</html>

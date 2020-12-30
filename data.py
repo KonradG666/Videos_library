@@ -1,6 +1,5 @@
 import json
 
-
 class Videos:
     def __init__(self):
         try:
