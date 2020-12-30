@@ -27,7 +27,7 @@ def delete_video(video_id):
 
     return render_template("music.html", form=form, videos=videos.all(), error=error)
 
-@app.route("/index/<int:video_id>", methods=["PUT"])
+@app.route("/library/<int:video_id>", methods=["PUT"])
 def video_update(video_id):
     pass
 
