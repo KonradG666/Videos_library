@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html lang="en"style="background-color: peachpuff;">
-<head>
-    <meta charset="UTF-8">
-    <title>Album details</title>
-</head>
+{% extends 'main.html' %}
+
+{% block head %}
+	<title> Album Update </title>
+{% endblock %}
+
+{% block body %}
 <body>
-    <h2> Change: </h2>
+    <h2> Update </h2>
     <form method="POST" action="/library/{{ video_id }}/">
         {{ form.hidden_tag() }}
         <table>
@@ -19,4 +20,4 @@
         <input type="submit" value="Go">
     </form>
 </body>
-</html>
+{% endblock %}
