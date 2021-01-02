@@ -1,13 +1,14 @@
 {% extends 'main.html' %}
 
 {% block head %}
-	<title> Videos Update </title>
+	<title>Videos Create</title>
 {% endblock %}
+
 
 {% block body %}
 <body>
-    <h2> Update Music Video </h2>
-    <form method="POST" action="/library/{{ video_id }}/">
+    <h2> Add Music Video </h2>
+    <form method="POST" action="/library/add/">
         {{ form.hidden_tag() }}
         <table>
             {% for field in form if field.widget.input_type != 'hidden' %}

@@ -1,7 +1,7 @@
 {% extends 'main.html' %}
 
 {% block head %}
-<title>Videos Library</title>
+	<title>Videos Library</title>
 {% endblock %}
 
 
@@ -22,13 +22,13 @@
     </tr>
 {% endfor %}
 </table>
-</div>
-    <h2> Add New Video </h2>
+<div>
+    <h2> Add Music Video </h2>
     <form method="POST" action="/library/">
         {{ form.hidden_tag() }}
         <table>
             {% for field in form if field.widget.input_type != 'hidden' %}
-               	<tr>
+                <tr>
                     <th>{{ field.label }} {% if field.flags.required %}*{% endif %}</th>
                     <td>{{ field }}</td>
                 </tr>
@@ -37,4 +37,6 @@
         <input type="submit" value="Go">
     </form>
 </div>
+   
+
 {% endblock %}
